@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧁 Baking 🧁</title>
+  </head>
+  <style>
+    body {
+      background: radial-gradient(
+        circle at 7.5% 24%,
+        rgb(237, 161, 193) 0%,
+        rgb(250, 178, 172) 25.5%,
+        rgb(190, 228, 210) 62.3%,
+        rgb(215, 248, 247) 93.8%
+      );
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #c4e9db;
+      background: aliceblue;
+      font-size: 20px;
+      border-radius: 8px;
+      padding: 10px 15px;
+      transition: all 150 ms ease-in-out;
+    }
+
+    button:hover {
+      background: #c4e9db;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 600px;
+      background: aliceblue;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px auto;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .theme-button {
+      font-size: 10px;
+      background: black;
+      color: aliceblue;
+      padding: 5px 8px;
+    }
+    .theme-button:hover {
+      color: black;
+      background: aliceblue;
+    }
+
+    .baking-intro-picture {
+      border-radius: 15px;
+      transition: all 150ms ease-in-out;
+      width: 600px;
+    }
+
+    .baking-intro-picture:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+    .image-gallery {
+      margin: 18px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+    .image-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: all 150ms ease-in-out;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.2);
+    }
+    .dark {
+      background: linear-gradient(
+        -225deg,
+        #ff3cac 0%,
+        #562b7c 52%,
+        #2b86c5 100%
+      );
+      color: aliceblue;
+    }
+
+    .dark .container {
+      background-color: #2b86c5;
+    }
+  </style>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>🧁 Baking 🧁</h1>
+      <h2>My favorite hobby 👩🏻‍🍳</h2>
+      <a href="https://www.craftybaking.com/learn/baked-goods" target="_blank">
+        <img
+          src="https://images.unsplash.com/photo-1514411959691-a8f39b0ac8b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGJha2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt=""
+          class="baking-intro-picture"
+        />
+      </a>
+      <p>
+        The term baking refers primarily to the cooking of flour-based foods in
+        which the heat of an oven sets their structures. Thus breads, cakes,
+        muffins, and loaves are all cooked by exposing them to particular
+        temperatures that firm each specific dough to the center, with just the
+        right degree of browning on the outside.
+      </p>
+      <div class="image-gallery">
+        <img
+          src="https://images.unsplash.com/photo-1619981777772-40eb5673c7ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGJha2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1800&q=60"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1615735486329-c61cd40bfcc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGJha2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1515192088926-be05d2dded88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGJha2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1800&q=60"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJha2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1800&q=60"
+          alt=""
+        />
+      </div>
+
+      <button class="learn-button">🙋🏻‍♀️ Learn to Bake!</button>
+    </div>
+    <footer>Coded by Juliana Valencia 👩🏻‍💻</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function learnToBake() {
+        prompt("What is your email address?");
+        alert(
+          "Thank you! We will be in touch with all the classes information soon!"
+        );
+      }
+      let learnToBakeButton = document.querySelector(".learn-button");
+      learnToBakeButton.addEventListener("click", learnToBake);
+    </script>
+  </body>
+</html>
